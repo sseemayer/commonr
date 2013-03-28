@@ -1,4 +1,4 @@
-# commonr - CommonJS Module/1.1 - style module management for R
+# commonr - JavaScript-style module management for R
 
 Organize your R project on the filesystem level without creating packages! `commonr` is an R implementation of the [JavaScript CommonJS Module/1.1](http://wiki.commonjs.org/wiki/Modules/1.1) specification that lets you create modules as R files in the filesystem without having to worry about cluttering your global environment with lots of `source('myfile.R')` calls.
 
