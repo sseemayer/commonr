@@ -1,0 +1,9 @@
+Package: commonr
+Type: Package
+Title: Structure your code in the spirit of CommonJS Module/1.1
+Version: 1.0
+Date: 2013-03-28
+Author: Stefan Seemayer
+Maintainer: Stefan Seemayer <mail@semicolonsoftware.de>
+Description: Allows the structuring of R code into JavaScript style modules with dependency resolution, a clean global namespace, etc.
+License: BSD

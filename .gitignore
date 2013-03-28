@@ -5,6 +5,7 @@
 
 # Example code in package build process
 *-Ex.R
+*.Rcheck
 
 ### /home/seemayer/.gitignore-boilerplates/Global/vim.gitignore
 
@@ -15,3 +16,5 @@ Session.vim
 *~
 
 
+### Other
+*.tar.gz
