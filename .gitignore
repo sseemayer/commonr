@@ -1,0 +1,17 @@
+### /home/seemayer/.gitignore-boilerplates/R.gitignore
+
+# History files
+.Rhistory
+
+# Example code in package build process
+*-Ex.R
+
+### /home/seemayer/.gitignore-boilerplates/Global/vim.gitignore
+
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+
