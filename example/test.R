@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-source("commonr.R")
+library(commonr)
 require.r.config(basedir='modules')
 
 add = require.r("math/add")
