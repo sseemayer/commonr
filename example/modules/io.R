@@ -1,7 +1,5 @@
 # example of multiple exports in a single R file. 
-# We will initialize the exports as an empty list and then add objects to it step by step.
-
-exports = list()
+# By default, exports is an empty list. We can add functions to the list to export multiple things from one module:
 
 exports$printf = function(format, ...) {
         cat(sprintf(format, ...))

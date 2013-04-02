@@ -22,8 +22,6 @@ A package is simply defined as an R script file where all symbols that should be
 
 *modules/io.R:*
 
-    exports = list()
-
     exports$fprintf = function(file, format, ...) {
         cat(sprintf(format, ...), file=file)
     }

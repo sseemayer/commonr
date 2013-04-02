@@ -88,6 +88,7 @@
         load.env = new.env()
         module_file = .resolve_module(module_name)
         load.env$require.r.tmpsrc = module_file
+        load.env$exports = list()
 
         source(module_file, local=load.env)
         load.env$exports
