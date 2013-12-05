@@ -25,6 +25,17 @@
         NULL
 }
 
+
+# resolve symlinks until you can't resolve no more
+.resolve_symlink = function(path) {
+        resolved = Sys.readlink(path)
+        while(resolved != "") {
+                path = resolved
+                resolved = Sys.readlink(path)
+        }
+        path
+}
+
 # get the basedir for loading modules
 .get_basedir <- function() {
 
@@ -42,7 +53,7 @@
 
         if (length(match) > 0) {
                 # file was loaded with Rscript
-                srcdir = dirname(sub(needle, "", cmdArgs[match]))
+                srcdir = dirname(.resolve_symlink(sub(needle, "", cmdArgs[match])))
 
         } else {
                 # file was 'source'd via R repl
@@ -50,7 +61,7 @@
                 if(is.null(spath)) {
                         srcdir = '.'
                 } else {
-                        srcdir = dirname(normalizePath(spath))
+                        srcdir = dirname(normalizePath(resolve_symlink(spath)))
                 }
         }
 
