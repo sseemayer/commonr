@@ -81,13 +81,15 @@
         }
 
         module_file = file.path(.get_basedir(), module_file)
-
-        if(!file.exists(module_file)) {
-                module_file = paste(module_file, '.R', sep='')
-        }
-
-        if(!file.exists(module_file)) { 
+        if(file.exists(module_file) && !file.info(module_file)$isdir) {
+                return(module_file)
+        } else if(file.exists(file.path(module_file, "index.R"))) {
+                return(file.path(module_file, "index.R"))
+        } else if(file.exists(paste(module_file, '.R', sep=''))) {
+                return(paste(module_file, '.R', sep=''))
+        } else {
                 stop(sprintf("Cannot find module '%s' at '%s'!", module_name, module_file))
+
         }
 
         module_file
