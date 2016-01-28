@@ -47,6 +47,12 @@ A package is simply defined as an R script file where all symbols that should be
 
 ## Installation
 
+### Using devtools
+If you have [devtools](https://cran.r-project.org/web/packages/devtools/index.html) installed, simply do:
+        > library(devtools)
+        > install_github("sseemayer/commonr", subdir="commonr")
+
+### Manual
 Clone this git repository and use `R CMD INSTALL` to install:
 
         $ git clone https://github.com/sseemayer/commonr.git
